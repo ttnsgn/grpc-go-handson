@@ -8,7 +8,7 @@ import (
 )
 
 func (s *Server) Sum(ctx context.Context, in *pb.SumRequest) (*pb.SumResponse, error) {
-	log.Println("Sum function was invoked with %v\n", in)
+	log.Printf("Sum function was invoked with %v\n", in)
 	var result int32 = in.FisrtNumber + in.SecondNumer
 	return &pb.SumResponse{
 		Result: result,

@@ -20,7 +20,7 @@ func main() {
 		log.Fatalf("Failed to listen on: %v\n", err)
 	}
 
-	log.Println("Listen on: %s\n", addr)
+	log.Printf("Listen on: %s\n", addr)
 	s := grpc.NewServer()
 	pb.RegisterCalculatorServiceServer(s, &Server{})
 
