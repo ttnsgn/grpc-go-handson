@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = "github.com/ttnsgn/grpc-go-handson/calculator/proto";
+
+message SumRequest {
+  int32 fisrt_number = 1;
+  int32 second_numer = 2;
+}
+
+message SumResponse {
+  int32 result = 1;
+}
